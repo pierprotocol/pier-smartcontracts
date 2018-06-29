@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "declaration": false,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "module": "commonjs",
+        "newLine": "LF",
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": false,
+        "noUnusedParameters": false,
+        "noUnusedLocals": false,
+        "outDir": "dist",
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "strictNullChecks": false,
+        "target": "es2016",
+        "lib": [
+            "es7"
+        ],
+        "inlineSources": true,
+        "listEmittedFiles": true,
+        "listFiles": true
+    },
+    "compileOnSave": true,
+    "include": [
+        "src/**/*.ts"
+
+    ]
+}

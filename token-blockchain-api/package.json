@@ -1,0 +1,88 @@
+{
+  "name": "token-server",
+  "version": "0.3.1",
+  "private": true,
+  "description": "DBrain Server",
+  "repository": "git@github.com:dbrainio/Server.git",
+  "license": "MIT",
+  "scripts": {
+    "start": "cross-env NODE_ENV=dev nodemon",
+    "start:test": "cross-env NODE_ENV=test nodemon",
+    "start:noreload": "cross-env NODE_ENV=dev ts-node src/index.ts",
+    "start:cluster": "./node_modules/.bin/ts-node src/cluster.ts",
+    "build": "tsc && copyfiles -u 2 src/public/**/* dist/public",
+    "copyfiles": "copyfiles -u 2 src/public/**/* dist/public",
+    "clean": "rimraf dist",
+    "lint": "tslint ./src/**/*.ts ./test/**/*.ts",
+    "_pretest": "cross-env NODE_ENV=test npm build && npm run lint",
+    "test": "cross-env NODE_ENV=test mocha",
+    "test:coverage": "nyc npm test",
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "@types/sequelize": "^4.27.4",
+    "@types/winston": "^2.3.7",
+    "aws-sdk": "^2.188.0",
+    "bignumber.js": "^4.1.0",
+    "body-parser": "^1.18.2",
+    "compression": "^1.7.1",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "jwks-rsa": "^1.2.1",
+    "method-override": "^2.3.10",
+    "morgan": "^1.9.0",
+    "pg": "^7.4.1",
+    "pg-hstore": "^2.3.2",
+    "redis": "^2.8.0",
+    "sequelize": "^4.32.2",
+    "soltsice": "^0.10.10",
+    "supertest": "^3.0.0",
+    "swagger-ui-express": "^2.0.15",
+    "ts-express-decorators": "^3.9.1",
+    "ts-httpexceptions": "^3.0.2",
+    "uuid": "^3.2.1",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.2",
+    "@types/cors": "^2.8.3",
+    "@types/express-jwt": "0.0.38",
+    "@types/mocha": "^2.2.47",
+    "@types/morgan": "^1.7.35",
+    "@types/request": "^2.47.0",
+    "@types/supertest": "^2.0.4",
+    "@types/uuid": "^3.4.3",
+    "chai": "^4.1.2",
+    "cross-env": "^5.1.3",
+    "ganache-cli": "^6.0.3",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.0.0",
+    "nodemon": "^1.14.11",
+    "nyc": "^11.4.1",
+    "request": "^2.83.0",
+    "rimraf": "^2.6.2",
+    "source-map-support": "^0.5.3",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.9.1",
+    "typescript": "^2.6.2",
+    "typescript-formatter": "^7.0.1"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "sourceMap": true,
+    "instrument": true
+  }
+}

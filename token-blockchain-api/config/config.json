@@ -1,0 +1,34 @@
+{
+    "redis": {
+        "host": "localhost",
+        "port": 6379
+    },
+    "postgres": {
+        "host": "localhost",
+        "user": "localdata",
+        "password": "localdata",
+        "db": "dbrain-blockchain-api"
+    },
+    "session": {
+        "secret": "xxx"
+    },
+    "api": {
+        "prefix": "/api/v1",
+        "ws": "/ws",
+        "port": 3000
+    },
+    "sqs": {
+        "pipes": [
+            {
+                "in": "xxxx",
+                "out": "xxx"
+            }
+        ],
+        "region": "us-east-1",
+        "access_key": "xxx",
+        "access_key_secret": "xxx"
+    },
+    "w3": {
+        "provider": "http://localhost:8546"
+    }
+}
