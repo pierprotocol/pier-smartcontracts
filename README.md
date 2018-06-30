@@ -1,4 +1,4 @@
-# Pier
+# Welcome to ////Pier
 
 We need a way at Etch of paying people wages and bonuses within the blockchain community in crypto without exposing them to volatility risk of paying out in Ether or Bitcoin. A number of existing “stable” tokens are available that mitigate this risk, some like Tether and TrueCoin are backed by USD on deposit, others like MakerDAO, Dai uses Ether to over colatorised to achieve this stability.
 
@@ -61,8 +61,6 @@ Wallet 2 - Top-Up wallet.
 
 There are eight steps to issuing additional ////Pier tokens:
 
-
-
 1. Issuer presents the contract with a new ERC20 token to be used as collateral
 2. Approve  / Reject is received from the contract based on a number of underlying criteria to include but not limited to: volume, price feed availability and if token is already on the pre-approved white list
 3. If successful, issuer calls the contracts issue function with the number of tokens to be issued 
@@ -74,8 +72,35 @@ There are eight steps to issuing additional ////Pier tokens:
 
 ## Token parameters
 
+![Pier Figure 1](https://github.com/pierprotocol/pier-smartcontracts/blob/master/Pier_figure_1.png)
+![Pier Figure 2](https://github.com/pierprotocol/pier-smartcontracts/blob/master/Pier_figure_2.png)
+![Pier Figure 3 and 4](https://github.com/pierprotocol/pier-smartcontracts/blob/master/Pier_Figure_3_4.png)
 
-		 	 	 		
+## Security
+
+Collateral funds will be deposited in protected multi-signature wallets requiring 3/4 signatures to access. 
+
+## Black Swan Event
+
+The ////Pier token protocol is very much linked to the health of the Ethereum system. If there is any liveness issue with the Ethereum network, say if  blocks cannot be minedor a  51% attack by a bad actor the integrity of the ////Pier could be in jeopardy.	
+
+Also a possible sharp crash in the market or some other failure in the oracle system could have huge implications. This is why we intend to have a a big red button within the contract that is governed by the ////Pier community.
+
+A ratchet system is proposed to sell any underperforming token when distress level is reached. 
+
+## Get Involved!
+
+We are an open community and need technologists, economists, crypto traders, accountants (is every transaction taxable??) lawyers, and artists to work on the specifications and code. Twenty percent of the ////Pier reward token are available to share (kind of founders token shares). If you would like to get involved please join the Telegram channel by signing up here:
+
+[Pier Telegram Channel](https://t.me/joinchat/Gd5CvUakS9f4ZVnGSJuwaQ)
+ 
+Twitter:
+
+////Pier [@pierprotocol](https://twitter.com/pierprotocol)
+
+Euros Evans [@euros](https://twitter.com/euros)
+
+Yuriy Habarov [@yuriy_habarov](https://twitter.com/yuriy_habarov)		 	 	 		
 
 
 
